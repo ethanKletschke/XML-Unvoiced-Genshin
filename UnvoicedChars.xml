@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./UnvoicedChars.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<unvoicedChars startVersion="5.6">
+  <abbrKey>
+    <abbr>AQI: Archon Quest Interlude</abbr>
+  </abbrKey>
+
+  <character charId="SIGE-0001">
+    <charName>Sigewinne</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <event>Whirling Waltz</event>
+  </character>
+
+  <character charId="DEHY-0002">
+    <charName>Dehya</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <event>Whirling Waltz</event>
+  </character>
+
+  <character charId="CHEV-0003">
+    <charName>Chevreuse</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <event>Whirling Waltz</event>
+  </character>
+
+  <character charId="CHAR-0004">
+    <charName>Charlotte</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <event>Whirling Waltz</event>
+  </character>
+  
+  <character charId="LYNE-0005">
+    <charName>Lynette</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <event>Whirling Waltz</event>
+  </character>
+
+  <character charId="ALBE-0006">
+    <charName>Albedo</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="HUTA-0007">
+    <charName>Hu Tao</charName>
+    <unvoicedIn>5.3</unvoicedIn>
+    <voiceline>About Lan Yan</voiceline>
+  </character>
+
+  <character charId="FISC-0008">
+    <charName>Fischl</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="KLEE-0009">
+    <charName>Klee</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="LISA-0010">
+    <charName>Lisa</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="NOEL-0011">
+    <charName>Noelle</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="DION-0012">
+    <charName>Diona</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="JEAN-0013">
+    <charName>Jean</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="KAEY-0014">
+    <charName>Kaeya</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="MIKA-0015">
+    <charName>Mika</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="VENT-0016">
+    <charName>Venti</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="ROSA-0017">
+    <charName>Rosaria</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="SUCR-0018">
+    <charName>Sucrose</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="DILU-0019">
+    <charName>Diluc</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="AMBE-0020">
+    <charName>Amber</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+  <character charId="AETH-0021">
+    <charName>Aether</charName>
+    <unvoicedIn>5.6</unvoicedIn>
+    <quest>Paralogism (AQI)</quest>
+  </character>
+
+</unvoicedChars>

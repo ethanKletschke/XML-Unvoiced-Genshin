@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="unvoicedChars">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- An optional abbreviation key -->
+        <xs:element name="abbrKey" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="abbr" maxOccurs="unbounded">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:minLength value="3" />
+                    <xs:maxLength value="55" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="character" maxOccurs="unbounded">
+          <!-- Documentation -->
+          <xs:annotation>
+            <xs:documentation> The unvoiced character. </xs:documentation>
+          </xs:annotation>
+
+          <!-- Type Declaration -->
+          <xs:complexType>
+            <xs:sequence>
+              <!-- The name of the character. -->
+              <xs:element name="charName" type="tNameString">
+                <!-- Documentation -->
+                <xs:annotation>
+                  <xs:documentation> The name of the unvoiced character. </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <!-- The version of the game they were unvoiced in. -->
+              <xs:element name="unvoicedIn" type="tVersion">
+                <!-- Documentation -->
+                <xs:annotation>
+                  <xs:documentation> The version in which the character is unvoiced. </xs:documentation>
+                </xs:annotation>
+              </xs:element>
+              <xs:choice>
+                <!-- The quest they were unvoiced in -->
+                <xs:element name="quest" type="tEventName">
+                  <!-- Documentation -->
+                  <xs:annotation>
+                    <xs:documentation> The event/quest the character was unvoiced in. </xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <!-- The event they were unvoiced in -->
+                <xs:element name="event" type="tEventName">
+                  <!-- Documentation -->
+                  <xs:annotation>
+                    <xs:documentation> The event the character was unvoiced in. </xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <!-- The cutscene they were unvoiced in -->
+                <xs:element name="cutscene" type="tEventName">
+                  <!-- Documentation -->
+                  <xs:annotation>
+                    <xs:documentation> The cutscene the character was unvoiced in. </xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+                <!-- The character voiceline that was unvoiced -->
+                <xs:element name="voiceline" type="tEventName">
+                  <!-- Documentation -->
+                  <xs:annotation>
+                    <xs:documentation> The voiceline in the VoiceOvers menu which is unvoiced. </xs:documentation>
+                  </xs:annotation>
+                </xs:element>
+              </xs:choice>
+            </xs:sequence>
+
+            <xs:attribute name="charId" use="required">
+              <!-- Documentation -->
+              <xs:annotation>
+                <xs:documentation> The unique ID of the character, specified as the capitalised
+                  first 4 letters of their name, followed by a dash and a sequential 4-digit number. </xs:documentation>
+              </xs:annotation>
+
+              <!-- Type Declaration -->
+              <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                  <xs:pattern value="[A-Z]{4}\-[0-9]{4}">
+                    <!-- Documentation -->
+                    <xs:annotation>
+                      <xs:documentation> The pattern specifying the ID. </xs:documentation>
+                    </xs:annotation>
+                  </xs:pattern>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+
+      <xs:attribute name="startVersion" type="tVersion" use="required">
+        <!-- Documentation -->
+        <xs:annotation>
+          <xs:documentation> The version from which the document keeps track of unvoiced characters. </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Name type for characters -->
+  <xs:simpleType name="tNameString">
+    <!-- Documentation -->
+    <xs:annotation>
+      <xs:documentation> The name type for characters. </xs:documentation>
+    </xs:annotation>
+
+
+    <!-- Facets -->
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="collapse" />
+      <!-- Min Length is 2. -->
+      <xs:minLength value="2" />
+      <!-- Max Length is 25. -->
+      <xs:maxLength value="25" />
+      <!-- Pattern for this element's content. -->
+      <xs:pattern value="[a-zA-Z ]{2,25}">
+        <!-- Documentation -->
+        <xs:annotation>
+          <xs:documentation> This pattern ensures the name only includes whitespace and alphabetic
+            characters. </xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Version type -->
+  <xs:simpleType name="tVersion">
+    <!-- Documentation -->
+    <xs:annotation>
+      <xs:documentation> The type specifying the version number. </xs:documentation>
+    </xs:annotation>
+
+    <!-- Facets -->
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="collapse" />
+      <xs:pattern value="[0-9]\.[0-9]">
+        <!-- Documentation -->
+        <xs:annotation>
+          <xs:documentation> The pattern which specifies a "major.minor" version number. </xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="tEventName">
+    <!-- Documentation -->
+    <xs:annotation>
+      <xs:documentation>
+        The type for the event name.
+      </xs:documentation>
+    </xs:annotation>
+
+    <!-- Facets -->
+    <xs:restriction base="xs:string">
+      <xs:whiteSpace value="collapse" />
+      <xs:pattern value="[a-zA-Z0-9.()\[\] ]{2,45}">
+        <!-- Documentation -->
+        <xs:annotation>
+          <xs:documentation> Allows for a 2-45 character long name. </xs:documentation>
+        </xs:annotation>
+      </xs:pattern>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
