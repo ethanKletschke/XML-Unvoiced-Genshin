@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="./UnvoicedChars.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-stylesheet href="./UnvoicedChars.xsl" type="text/xsl"?>
 <unvoicedChars startVersion="5.6">
   <abbrKey>
     <abbr>AQI: Archon Quest Interlude</abbr>
