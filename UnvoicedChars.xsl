@@ -39,9 +39,8 @@
           <h1>
             Genshin Impact Unvoiced Characters
           </h1>
-          <p>
-            As of <xsl:value-of select="/unvoicedChars/@startVersion" />
-          </p> 
+          <p> As of <xsl:value-of select="/unvoicedChars/@startVersion" />
+          </p>
         </header>
         <main>
           <table>
@@ -52,14 +51,22 @@
                 <th>Where Unvoiced</th>
               </tr>
             </thead>
-            <xsl:for-each select="/unvoicedChars/character">
-              <xsl:sort select="unvoicedIn" />
-              <tr>
-                <td><xsl:value-of select="charName" /></td>
-                <td><xsl:value-of select="unvoicedIn" /></td>
-                <td><xsl:value-of select="event | quest | cutscene | voiceline" /></td>
-              </tr>
-            </xsl:for-each>
+            <tbody>
+              <xsl:for-each select="/unvoicedChars/character">
+                <xsl:sort select="unvoicedIn" />
+                <tr>
+                  <td>
+                    <xsl:value-of select="charName" />
+                  </td>
+                  <td>
+                    <xsl:value-of select="unvoicedIn" />
+                  </td>
+                  <td>
+                    <xsl:value-of select="event | quest | cutscene | voiceline" />
+                  </td>
+                </tr>
+              </xsl:for-each>
+            </tbody>
           </table>
         </main>
       </body>
