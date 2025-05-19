@@ -154,9 +154,7 @@
   <xs:simpleType name="tEventName">
     <!-- Documentation -->
     <xs:annotation>
-      <xs:documentation>
-        The type for the event name.
-      </xs:documentation>
+      <xs:documentation> The type for the event name. </xs:documentation>
     </xs:annotation>
 
     <!-- Facets -->
